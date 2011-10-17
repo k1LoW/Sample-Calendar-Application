@@ -37,6 +37,11 @@
             <?php echo $vevent['Vevent']['rrule_freq']; ?>
             &nbsp;
         </dd>
+        <dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Rrule Count'); ?></dt>
+        <dd<?php if ($i++ % 2 == 0) echo $class;?>>
+            <?php echo $vevent['Vevent']['rrule_count']; ?>
+            &nbsp;
+        </dd>
         <dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Rrule Interval'); ?></dt>
         <dd<?php if ($i++ % 2 == 0) echo $class;?>>
             <?php echo $vevent['Vevent']['rrule_interval']; ?>
@@ -46,22 +51,7 @@
         <dd<?php if ($i++ % 2 == 0) echo $class;?>>
             <?php echo $vevent['Vevent']['rrule_byday']; ?>
             &nbsp;
-        </dd>
-        <dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Rrule Bymonth'); ?></dt>
-        <dd<?php if ($i++ % 2 == 0) echo $class;?>>
-            <?php echo $vevent['Vevent']['rrule_bymonth']; ?>
-            &nbsp;
-        </dd>
-        <dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Rrule Bymonthday'); ?></dt>
-        <dd<?php if ($i++ % 2 == 0) echo $class;?>>
-            <?php echo $vevent['Vevent']['rrule_bymonthday']; ?>
-            &nbsp;
-        </dd>
-        <dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Rrule Count'); ?></dt>
-        <dd<?php if ($i++ % 2 == 0) echo $class;?>>
-            <?php echo $vevent['Vevent']['rrule_count']; ?>
-            &nbsp;
-        </dd>
+        </dd>        
         <dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Rrule Until'); ?></dt>
         <dd<?php if ($i++ % 2 == 0) echo $class;?>>
             <?php echo $vevent['Vevent']['rrule_until']; ?>
@@ -83,7 +73,7 @@
     <h3><?php __('Actions'); ?></h3>
     <ul>
         <li><?php echo $this->Html->link(__('Edit Vevent', true), array('action' => 'edit', $vevent['Vevent']['uid'])); ?> </li>
-        <li><?php echo $this->Html->link(__('Delete Vevent', true), array('action' => 'delete', $vevent['Vevent']['uid']), null, sprintf(__('Are you sure you want to delete # %s?', true), $vevent['Vevent']['id'])); ?> </li>
+        <li><?php echo $this->Html->link(__('Delete Vevent', true), array('action' => 'delete', $vevent['Vevent']['uid']), null, sprintf(__('Are you sure you want to delete # %s?', true), $vevent['Vevent']['uid'])); ?> </li>
         <li><?php echo $this->Html->link(__('List Vevents', true), array('action' => 'index')); ?> </li>
         <li><?php echo $this->Html->link(__('New Vevent', true), array('action' => 'add')); ?> </li>
     </ul>

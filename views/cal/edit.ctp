@@ -8,13 +8,13 @@
         echo $this->Form->input('summary', array('type' => 'text'));
         echo $this->Form->input('description');
         echo $this->Form->input('location', array('type' => 'text'));
+        echo $this->Form->input('categories', array('type' => 'text'));
         echo $this->Form->input('dtstart');
         echo $this->Form->input('dtend');
         echo $this->Form->input('rrule_freq', array('type' => 'select', 'options' => $rrule_freqs, 'empty' => true));
         echo $this->Form->input('rrule_count', array('type' => 'text'));
         echo $this->Form->input('rrule_interval', array('type' => 'text'));
         echo $this->Form->input('rrule_byday', array('type' => 'text'));
-        echo $this->Form->input('rrule_bymonth', array('type' => 'text'));
         echo $this->Form->input('rrule_until', array('empty' => true));        
     ?>
     </fieldset>

@@ -14,7 +14,6 @@
         echo $this->Form->input('rrule_count', array('type' => 'text'));
         echo $this->Form->input('rrule_interval', array('type' => 'text'));
         echo $this->Form->input('rrule_byday', array('type' => 'text'));
-        echo $this->Form->input('rrule_bymonth', array('type' => 'text'));
         echo $this->Form->input('rrule_until', array('empty' => true));        
     ?>
     </fieldset>
@@ -23,7 +22,6 @@
 <div class="actions">
     <h3><?php __('Actions'); ?></h3>
     <ul>
-
         <li><?php echo $this->Html->link(__('List Vevents', true), array('action' => 'index'));?></li>
     </ul>
 </div>
