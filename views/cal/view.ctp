@@ -32,6 +32,11 @@
             -
             <?php echo $vevent['Vevent']['dtend']; ?>
         </dd>
+        <dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Daylong'); ?></dt>
+        <dd<?php if ($i++ % 2 == 0) echo $class;?>>
+            <?php echo $vevent['Vevent']['daylong']; ?>
+            &nbsp;
+        </dd>
         <dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Rrule Freq'); ?></dt>
         <dd<?php if ($i++ % 2 == 0) echo $class;?>>
             <?php echo $vevent['Vevent']['rrule_freq']; ?>

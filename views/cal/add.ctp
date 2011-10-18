@@ -10,6 +10,7 @@
         echo $this->Form->input('categories', array('type' => 'text'));
         echo $this->Form->input('dtstart');
         echo $this->Form->input('dtend');
+        echo $this->Form->input('daylong');
         echo $this->Form->input('rrule_freq', array('type' => 'select', 'options' => $rrule_freqs, 'empty' => true));
         echo $this->Form->input('rrule_count', array('type' => 'text'));
         echo $this->Form->input('rrule_interval', array('type' => 'text'));

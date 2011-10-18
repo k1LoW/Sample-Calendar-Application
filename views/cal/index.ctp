@@ -52,10 +52,16 @@
                     <div class="event <?php if($event['Vevent']['id'] % 2 == 0): ?>even<?php else: ?>odd<?php endif; ?>">
                         <strong><?php echo $this->Html->link($event['Vevent']['summary'], array('controller' => 'cal', 'action' => 'view', $event['Vevent']['uid'])); ?></strong>
                         <p>
-                            <strong>Start: </strong><?php echo $event['Vevent']['dtstart']; ?>
+                            <strong>DTSTART: </strong><?php echo $event['Vevent']['dtstart']; ?>
                         </p>
                         <p>
-                            <strong>End&nbsp;&nbsp;: </strong><?php echo $event['Vevent']['dtend']; ?>
+                            <strong>DTEND: </strong><?php echo $event['Vevent']['dtend']; ?>
+                        </p>
+                        <p>
+                            <strong>Event Start: </strong><?php echo $event['Vevent']['event_start']; ?>
+                        </p>
+                        <p>
+                            <strong>Event End: </strong><?php echo $event['Vevent']['event_end']; ?>
                         </p>
                     </div>
                     <?php endforeach; ?>
