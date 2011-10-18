@@ -1,7 +1,7 @@
 <div class="vevents index">
     <h2><?php echo date('Y-m', mktime(0,0,0, $month, 1, $year)); ?></h2>
     <table cellpadding="0" cellspacing="0">
-        <thead>           
+        <thead>
             <th>
                 Sun
             </th>
@@ -25,7 +25,7 @@
             </th>
         </thead>
         <tbody>
-            <?php 
+            <?php
               $cal = range(0,6);
               $w = date('w', mktime(0, 0, 0, $month, 1, $year));
               for($i = 0; $i < $w; $i++) {
@@ -63,9 +63,9 @@
                     -
                     <?php endif; ?>
                 </td>
-                <?php endfor; ?>    
+                <?php endfor; ?>
             </tr>
-            <?php endfor; ?>    
+            <?php endfor; ?>
         </tbody>
     </table>
 
