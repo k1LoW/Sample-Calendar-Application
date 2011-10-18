@@ -1,5 +1,5 @@
 <div class="vevents index">
-    <h2><?php __('Vevents');?></h2>
+    <h2><?php echo date('Y-m', mktime(0,0,0, $month, 1, $year)); ?></h2>
     <table cellpadding="0" cellspacing="0">
         <thead>           
             <th>
@@ -68,6 +68,13 @@
             <?php endfor; ?>    
         </tbody>
     </table>
+
+    <div class="paging">
+        <?php echo $this->Html->link('<< ' . __('previous', true), array('action' => 'index', $year, $month - 1)); ?>
+        |
+        <?php echo $this->Html->link(__('next', true) . ' >>', array('action' => 'index', $year, $month + 1)); ?>
+    </div>
+
 </div>
 <div class="actions">
     <h3><?php __('Actions'); ?></h3>
